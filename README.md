@@ -66,6 +66,18 @@ npm run dev
 
 Open http://localhost:5173 — select models, run benchmarks, compare results.
 
+## 📦 Example
+
+A minimal runnable example is in the `example/` folder:
+
+```bash
+cd example
+pip install -r requirements.txt
+python example.py
+```
+
+It embeds sentences with Sentence-Transformers and compares similarity to a query.
+
 ## 📖 What You'll Learn
 
 1. How embedding models convert text to vectors
