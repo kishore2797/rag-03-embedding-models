@@ -1,23 +1,23 @@
-# RAG Tutorial 03 — Embedding Models
+# 🧬 RAG Tutorial 03 — Embedding Models
 
 <p align="center">
-  <a href="https://github.com/BellaBe/mastering-rag"><img src="https://img.shields.io/badge/Series-Mastering_RAG-blue?style=for-the-badge" /></a>
+  <a href="https://github.com/kishore2797/mastering-rag"><img src="https://img.shields.io/badge/Series-Mastering_RAG-blue?style=for-the-badge" /></a>
   <img src="https://img.shields.io/badge/Part-3_of_16-green?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Difficulty-Beginner-brightgreen?style=for-the-badge" />
 </p>
 
-> **Part of the [Mastering RAG](https://github.com/BellaBe/mastering-rag) tutorial series**  
-> Previous: [02 — Chunking Strategies](https://github.com/BellaBe/rag-02-chunking-strategies) | Next: [04 — Vector Stores](https://github.com/BellaBe/rag-04-vector-stores)
+> **Part of the [Mastering RAG](https://github.com/kishore2797/mastering-rag) tutorial series**  
+> Previous: [02 — Chunking Strategies](https://github.com/kishore2797/rag-02-chunking-strategies) | Next: [04 — Vector Stores](https://github.com/kishore2797/rag-04-vector-stores)
 
 ---
 
-## Real-World Scenario
+## 🌍 Real-World Scenario
 
 > You're building a product search engine. Users type "lightweight laptop for programming under $800" and expect relevant results. The embedding model is the brain behind this — it decides that "lightweight laptop" is semantically close to "ultrabook" and "MacBook Air." **Pick the wrong model** and your search returns desktops. **Pick an expensive one** and you burn $500/month on API calls for a simple demo. This tutorial helps you choose wisely.
 
 ---
 
-## What You'll Build
+## 🏗️ What You'll Build
 
 A benchmarking dashboard that compares **11+ embedding models** (OpenAI, Cohere, and open-source) on the same datasets. Measure retrieval accuracy, latency, cost, and embedding quality — all from one interactive UI.
 
@@ -29,7 +29,7 @@ Dataset (queries + ground truth) ──→ 11 Models in parallel
 ──→ Compare: Precision@K, MRR, NDCG, latency, cost, UMAP viz
 ```
 
-## Key Concepts
+## 🔑 Key Concepts
 
 - **Embeddings**: dense vector representations that capture semantic meaning
 - **Dimension trade-offs**: 384 vs. 768 vs. 1536 dimensions (speed vs. quality)
@@ -37,14 +37,14 @@ Dataset (queries + ground truth) ──→ 11 Models in parallel
 - **Asymmetric embeddings**: query and document use different encoding strategies
 - **Isotropy**: how uniformly embeddings are distributed in vector space
 
-## Tech Stack
+## 🛠 Tech Stack
 
 | Layer | Technology |
 |-------|-----------|
 | Backend | Python 3.11+ · FastAPI · Sentence-Transformers · OpenAI · Cohere |
 | Frontend | React 19 · Vite · Tailwind CSS · Recharts · UMAP visualization |
 
-## Quick Start
+## 🚀 Quick Start
 
 ### Backend
 
@@ -66,7 +66,7 @@ npm run dev
 
 Open http://localhost:5173 — select models, run benchmarks, compare results.
 
-## What You'll Learn
+## 📖 What You'll Learn
 
 1. How embedding models convert text to vectors
 2. Which model to choose for your use case and budget
@@ -74,13 +74,13 @@ Open http://localhost:5173 — select models, run benchmarks, compare results.
 4. The cost vs. quality trade-off between paid and open-source models
 5. How embedding quality directly impacts RAG answer quality
 
-## Prerequisites
+## 📋 Prerequisites
 
 - Python 3.11+ and Node.js 18+
-- Concepts from [Tutorial 02](https://github.com/BellaBe/rag-02-chunking-strategies) (chunking)
+- Concepts from [Tutorial 02](https://github.com/kishore2797/rag-02-chunking-strategies) (chunking)
 - Optional: OpenAI / Cohere API keys (open-source models work without)
 
-## Exercises
+## ✏️ Exercises
 
 1. **Domain-specific test**: Create 10 query-document pairs from your domain (medical, legal, code). Which model performs best on *your* data?
 2. **Dimension experiment**: Compare the same model family at different dimensions (e.g., OpenAI small vs. large). Plot quality vs. storage cost.
@@ -88,7 +88,7 @@ Open http://localhost:5173 — select models, run benchmarks, compare results.
 4. **Multilingual test**: Try non-English queries. Which models maintain quality across languages?
 5. **Stale embedding detection**: Embed the same text with two different model versions. How much do the vectors differ? (This matters for model upgrades.)
 
-## Common Mistakes
+## ⚠️ Common Mistakes
 
 | Mistake | Why It Happens | How to Fix |
 |---------|---------------|------------|
@@ -97,7 +97,7 @@ Open http://localhost:5173 — select models, run benchmarks, compare results.
 | Not normalizing vectors | Some models output non-unit vectors; cosine similarity assumes unit vectors | Normalize embeddings to unit length before storing |
 | Re-embedding entire corpus for each experiment | Costly and slow | Cache embeddings per model — only re-embed when chunks change |
 
-## Further Reading
+## 📚 Further Reading
 
 - [MTEB Leaderboard](https://huggingface.co/spaces/mteb/leaderboard) — Live benchmark of 100+ embedding models
 - [Massive Text Embedding Benchmark](https://arxiv.org/abs/2210.07316) (Muennighoff et al., 2022) — The paper behind MTEB
@@ -105,12 +105,12 @@ Open http://localhost:5173 — select models, run benchmarks, compare results.
 - [Sentence-Transformers Documentation](https://www.sbert.net/) — The go-to library for open-source embeddings
 - [Cohere Embed v3](https://cohere.com/blog/introducing-embed-v3) — Multi-stage embedding with compression
 
-## Next Steps
+## ➡️ Next Steps
 
-With embeddings in hand, head to **[Tutorial 04 — Vector Stores](https://github.com/BellaBe/rag-04-vector-stores)** to learn where and how to store and search these vectors efficiently.
+With embeddings in hand, head to **[Tutorial 04 — Vector Stores](https://github.com/kishore2797/rag-04-vector-stores)** to learn where and how to store and search these vectors efficiently.
 
 ---
 
 <p align="center">
-  <sub>Part of <a href="https://github.com/BellaBe/mastering-rag">Mastering RAG — From Zero to Production</a></sub>
+  <sub>Part of <a href="https://github.com/kishore2797/mastering-rag">Mastering RAG — From Zero to Production</a></sub>
 </p>
